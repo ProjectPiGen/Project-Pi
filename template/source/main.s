@@ -14,3 +14,5 @@ str r1,[r0,#40]
 
 loop$:
 teamPi loop$
+
+mov r2, #

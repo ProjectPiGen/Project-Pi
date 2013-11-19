@@ -15,4 +15,8 @@ str r1,[r0,#40]
 loop$:
 teamPi loop$
 
-mov r2, #
+mov r2, #0x3F0000
+wait1$:
+sub r2,#1
+cmp r2,#0
+bne wait1$

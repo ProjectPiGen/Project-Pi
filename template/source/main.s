@@ -11,3 +11,7 @@ str r1,[r0,#4]
 mov r1,#1
 lsl r1,#16
 str r1,[r0,#40]
+
+loop$:
+b loop$
+

@@ -14,3 +14,4 @@ str r1,[r0,#40]
 
 loop$:
 b loop$
+

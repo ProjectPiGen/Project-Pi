@@ -30,13 +30,8 @@ bl SetGpio
 .unreq pinVal
 
 /*Create Wait(Delay) to keep LED on*/
-decr .req r0
-mov decr,#0x3F0000
-wait1$:
-	sub decr,#1
-	teq decr,#0
-	bne wait1$
-.unreq decr
+ldr r0,=10000
+bl Wait
 
 /*Turn off OK LED*/
 pinNum .req r0
@@ -48,13 +43,8 @@ bl SetGpio
 .unreq pinVal
 
 /*Create Wait(Delay) to keep LED off*/
-decr .req r0
-mov decr,#0x3F0000
-wait2$:
-	sub decr,#1
-	teq decr,#0
-	bne wait2$
-.unreq decr
+ldr r0,=10000
+bl Wait
 
 /*Loop LED blink*/
 b loop$
